@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/images"
+        android:label="SOS APP"
+        android:roundIcon="@drawable/images"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SocialSecurity">
+        <activity android:name="com.example.SOSAPP.SmsActivity"/>
+        <activity android:name="com.example.SOSAPP.MainActivity"/>
+        <activity android:name="com.example.SOSAPP.SplashActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.SOSAPP.LawDisplayerActivity" />
+        <activity android:name="com.example.SOSAPP.LawsActivity" />
+        <activity android:name="com.example.SOSAPP.ContactActivity" />
+        <activity android:name="com.example.SOSAPP.SelfDefenseActivity" />
+
+        <service android:name="com.example.SOSAPP.ServiceMine" />
+    </application>
+
+</manifest>
